@@ -1,4 +1,2 @@
-#include <stdio.h>
-main() {
-    FILE *fp;if((fp = fopen( "helloworld.txt", "w" ))!=NULL)fputs("Hello world!!\n", fp);
-}
+#include<stdio.h>
+main(){fputs("Hello world\n",fopen("o","w"));}
