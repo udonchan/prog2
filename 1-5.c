@@ -1,12 +1,9 @@
 #include <stdio.h>
-#include <ctype.h>
-
 typedef struct gift {char code[10];char name[40];int price;}G;
 char *u (char *s) {
-    for (char *p = s; *p; p++) *p = toupper(*p)
-        ;return s;
+    for (char *p=s; *p=toupper(*p);p++);
+    return s;
 }
-
 main() {
     G g[100];FILE *fp;
     if((fp = fopen("gifts.dat","r" ))!= NULL) {
