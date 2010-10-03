@@ -1,17 +1,24 @@
 #include <stdio.h>
 
 int main( void ) {
-    char *p1, *p2;
-    p2 = "Winter";
-    p1 = p2;
+    int char_count = 0, th_count = 0;
+    char str[100];
+    char *p;
 
-    while (*p1!='\0') {
-	*p1++;
+    while (fgets(str, 100, stdin) != NULL) {
+        for (p = str; *p != '\0'; p++) {
+            char_count++;
+            if (strncmp(p, "th", 2) == 0 || strncmp(p, "Th", 2) == 0) {
+                th_count++;
+                *p = '+';
+                *++p = '+';
+            }
+        }
+        fputs(str, stdout);
     }
 
-    while (*p2!=*p1--) {
-	putchar(*p1);
-    }
-    puts("");
+    printf("文字数：%d\n", char_count);
+    printf("thの出現回数：%d\n", th_count);
+
     return 0;
 }
