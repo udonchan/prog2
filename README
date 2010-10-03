@@ -1,0 +1,2 @@
+usage
+gcc -std=c99 hoge.c
