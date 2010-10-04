@@ -30,11 +30,8 @@ void enqueue (struct queue *q, char key){
 char dequeue (struct queue *q){
     char ret = q->top->key;
     struct data *tmp = q->top;
-    if(q->top!=q->rear)
-	q->top = q->top->next;
-    else {
-	q->top=q->rear=0;
-    }
+    if(q->top!=q->rear)	q->top = q->top->next;
+    else q->top=q->rear=0;
     free(tmp);
     return ret;
 }
