@@ -1,1 +1,1 @@
-main(){char *p,*q;for(p=q="Winter";*p++;);while(*q!=putchar(*p--));puts("");}
+*p,*q;main(){for(for(p=q="Winter";*p++;);*q!=putchar(*p--););puts("");}
