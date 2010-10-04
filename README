@@ -1,2 +1,5 @@
-usage
+usage :
 gcc -std=c99 hoge.c
+方針 :
+可能な限り短かく書く．
+可能な限り難読に．
