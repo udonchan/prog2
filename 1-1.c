@@ -1,8 +1,2 @@
-#include <stdio.h>
-main(){
-    FILE *fp;
-    int id[8],name[20],i;
-    if((fp=fopen("gifts.dat","r"))!=NULL)
-	while(fscanf(fp,"%s\t%s\t%d\n",id,name,&i)!=EOF)
-	    printf("%s %s %d\n", id, name, i);
-}
+#include<stdio.h>
+*f,d[8],n[20];main(i){for(f=fopen("gifts.dat","r");~fscanf(f,"%s%s%d",d,n,&i);printf("%s %s %d\n",d,n,i));}
